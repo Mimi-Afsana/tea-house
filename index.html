@@ -23,7 +23,8 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        'gradient-start': '#FF8938',
+                        'gradient-end': '#F00',
                     }
                 }
             }
@@ -42,10 +43,10 @@
 
 <body class="font-manrope">
     <header class="container mx-auto">
-        <div class="hero ">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="my-20">
+            <div class="flex lg:justify-around items-center flex-col lg:flex-row-reverse ">
                 <div>
-                    <img src="images/banner.png" class="max-w-sm rounded-lg " />
+                    <img src="images/banner.png" class=" rounded-lg " />
                     <div
                         class="-mt-16 flex items-center gap-4 drop-shadow-2xl bg-slate-50 w-60 justify-center p-2 rounded-md">
                         <i class="fa-solid fa-star text-orange-400 text-3xl"></i>
@@ -55,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="pl-5 lg:pl-0">
                     <h1 class="text-7xl font-bold">It's good <br>
                         tea time at The
                         <br> Tea House
@@ -63,7 +64,8 @@
                     <p class="py-6">
                         Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.
                     </p>
-                    <button class="btn ">Explore More</button>
+                    <button class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white">Explore More <i
+                            class="fa-solid fa-arrow-up-right-dots"></i></button>
                 </div>
             </div>
         </div>
@@ -162,7 +164,7 @@
 
         <!-- super clients section -->
         <section
-            class="my-4 rounded-xl bg-gradient-to-r from-[#FF8638] to-[#F00] px-20 py-24 flex flex-col lg:flex-row gap-12">
+            class="my-4 rounded-xl bg-gradient-to-r from-gradient-start to-gradient-end px-20 py-24 flex flex-col lg:flex-row gap-12">
 
             <div class="flex items-center lg:pr-28">
                 <div class="space-y-5 ">
@@ -286,11 +288,17 @@
     </main>
 
 
-    <footer class=" bg-base-200 text-base-content p-10">
-        <div class="flex justify-between">
+    <footer class=" bg-base-200 text-base-content lg:px-48 px-4 py-4">
+        <div class="flex justify-between my-24">
             <img src="images/cup.png" alt="">
-            <p><span>Ready to get started?</span></p>
-            <button class="btn btn-primary">Get Started</button>
+            <div class="lg:pr-32 ">
+                <p>
+                    <span class="pr-4">Ready to get started?</span>
+                    <button class="btn bg-gradient-to-r from-gradient-start to-gradient-end">Get Started</button>
+                </p>
+
+            </div>
+
         </div>
         <div class="footer">
             <nav>
@@ -319,9 +327,12 @@
                     <label class="label">
                         <span class="label-text">Enter your email address</span>
                     </label>
-                    <div class="join">
-                        <input type="text" placeholder="username@site.com" class="input input-bordered join-item" />
-                        <button class="btn btn-primary join-item">Subscribe</button>
+                    <div class="relative">
+                        <input type="text" placeholder="username@site.com"
+                            class="py-4 bg-transparent border-b-2 border-black outline-none" />
+                        <button
+                            class="btn text-white bg-gradient-to-r from-gradient-start to-gradient-end rounded-full absolute top-0 right-0"><i
+                                class="fa-solid fa-chevron-right"></i></button>
                     </div>
                 </fieldset>
             </form>
